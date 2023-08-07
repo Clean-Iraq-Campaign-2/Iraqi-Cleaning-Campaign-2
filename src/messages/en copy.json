@@ -1,6 +1,6 @@
 {
   "Index": {
-    "helo": "Hello world! ",
+    "helo": "Hello world! arabic",
     "about-us":"من نحن",
     "campaigns":"الحملات",
     "contact-us":"تواصل معنا",
@@ -11,7 +11,6 @@
     "contribute":"ساهم",
     "suggest-a-campaign":"اقترح حملة",
     "stay-tuned":"تابع اخبار الحملات",
-    "folow-news-letter":" اكتب بريدك الالكتروني ليصلك كل ماهو جديد عن الحملات ",
-    "subscribe":"اشترك"
+    "folow-news-letter":" اكتب بريدك الالكتروني ليصلك كل ماهو جديد عن الحملات "
   }
 }
