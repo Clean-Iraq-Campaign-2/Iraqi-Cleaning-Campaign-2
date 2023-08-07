@@ -1,10 +1,8 @@
-import Header from '@/global/components/Header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import {NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
-import Footer from '@/global/components/Footer';
  
 export function generateStaticParams() {
   return [{locale: 'en'}, {locale: 'ar'}];
@@ -35,10 +33,8 @@ export default async function RootLayout({
     <html lang="en">
       <body className="bg-light">
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <Header/>
         {children}
-           </NextIntlClientProvider>
-        <Footer/>
+      </NextIntlClientProvider>
         </body>
     </html>
   )

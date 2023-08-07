@@ -1,11 +1,5 @@
 {
   "Index": {
-    "helo": "Hello world!",
-    "about-us":"About us",
-    "campaigns":"Campaigns",
-    "contact-us":"Contact us",
-    "home":"Home",
-    "blog":"Blog",
-    "join-us":"Join us"
+    "helo": "Hello"
   }
 }

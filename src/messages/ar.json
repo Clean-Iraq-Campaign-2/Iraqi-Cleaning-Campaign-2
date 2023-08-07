@@ -1,14 +1,5 @@
 {
   "Index": {
-    "helo": "Hello world! arabic",
-    "about-us":"عنا",
-    "campaigns":"الحملات",
-    "contact-us":"تواصل معنا",
-    "home":"الرئيسية",
-    "blog":"مدونة",
-    "join-us":"انضم معنا"
-
-
-
+    "helo": "مرحبا"
   }
 }
