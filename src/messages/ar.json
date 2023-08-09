@@ -1,17 +1,5 @@
 {
   "Index": {
-    "helo": "Hello world! arabic",
-    "about-us":"من نحن",
-    "campaigns":"الحملات",
-    "contact-us":"تواصل معنا",
-    "home":"الرئيسية",
-    "blog":"مدونة",
-    "join-us":"انضم معنا",
-    "about-cleaning-ampassadors":"عن سفراء النضافة",
-    "contribute":"ساهم",
-    "suggest-a-campaign":"اقترح حملة",
-    "stay-tuned":"تابع اخبار الحملات",
-    "folow-news-letter":" اكتب بريدك الالكتروني ليصلك كل ماهو جديد عن الحملات",
-    "subscribe":"اشترك"
+    "helo": "مرحبا"
   }
 }
