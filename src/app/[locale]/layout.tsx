@@ -5,6 +5,8 @@ import {NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
 import Header from '@/global/components/Header';
 import Footer from '@/global/components/footer/Footer';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
  
 export function generateStaticParams() {
   return [{locale: 'en'}, {locale: 'ar'}];
