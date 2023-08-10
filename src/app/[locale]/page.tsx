@@ -3,6 +3,9 @@ import Image from 'next/image'
 import {useTranslations} from 'next-intl';
 import { HeroSection } from './homePageComponents/HeroSection';
 import { UpcommingEventsSection } from '@/app/[locale]/homePageComponents/UpcommingEventsSection';
+import { AwernessSection } from './homePageComponents/AwernessSection';
+import { StatisticsSection } from './homePageComponents/StatisticsSection';
+import { GoalsSection } from './homePageComponents/GoalsSection';
 
 export default function Home() {
     const t = useTranslations('Index');
@@ -10,6 +13,9 @@ export default function Home() {
     <main className=" min-h-screen w-screen items-center justify-center">
       <HeroSection/>
       <UpcommingEventsSection/>
+      <AwernessSection/>
+      <StatisticsSection/>
+      <GoalsSection/>
     </main>
   )
 }
