@@ -11,7 +11,7 @@ export const Logo = () => {
     
   return (
    <Image
-        onClick={() => router.push(ROUTES.home)}
+        onClick={() => {router.push(ROUTES.home)}}
         src={logo}
         alt="logo"
         className={`rounded-full ${isTabletOrMobile ? 'w-10 h-10' : ' w-14 h-14'}`}
