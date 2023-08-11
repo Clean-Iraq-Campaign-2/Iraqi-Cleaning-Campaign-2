@@ -1,0 +1,40 @@
+.img{
+    --s: 15px; /* control the size */
+    padding: var(--s);
+    border: calc(2*var(--s)) solid #0000;
+    outline: 2.5px solid #3FACE3;
+    outline-offset: calc(-0.9*var(--s));
+    background: conic-gradient(from 90deg at 2.5px 2.5px,#0000 25%,#3FACE3 0);
+  }
+  .curved {
+    position: relative;
+    background: #436a91;
+    height: 40rem;
+  }
+  
+  .curved::after {
+    content: '';
+    border-top-left-radius: 100% 100%;
+    border-top-right-radius: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    height: 20%;
+  }
+  .tv {
+
+    box-shadow: 20px 20px rgba(129, 161, 198, 0.506);
+    transition: all .4s ease;
+  }
+  .tv:hover {
+    box-shadow: 10px 10px rgba(153, 181, 209, 0.635);
+  }
+  .tv1 {
+
+    box-shadow: 11px 11px  rgba(2, 83, 176, 0.577);
+    transition: all .4s ease;
+  }
+  .tv1:hover {
+    box-shadow: 9px 9px rgba(38, 80, 135, 0.629);
+  }
