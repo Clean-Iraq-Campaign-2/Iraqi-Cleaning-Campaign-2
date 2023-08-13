@@ -85,7 +85,6 @@ const SectionRow=({item,index }:{item:Campaign,index:number})=>{
             </div>
          </div>
          <p className="text-lg text-gray3 text-end">{item.description}</p>
-         <OutlinedButton text="تفاصيل" onClick={()=>{}}/>
         </div>
     </div>
   );
@@ -113,7 +112,6 @@ const SectionRowMobile=({item,index }:{item:Campaign,index:number})=>{
             </div>
          </div>
          <p className="text-md text-gray3 py-4">{item.description}</p>
-         <OutlinedButton text="تفاصيل" onClick={()=>{}}/>
         </div>
     </div>
   );
