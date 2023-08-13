@@ -15,7 +15,7 @@ export default function BlogCard() {
            <Image src={blogImage} alt=""  className="w-full h-full"/>
         </div>
         <div className="flex flex-col gap-2  text-gray1 px-3 py-4">
-          <h3 className="font-semibold  text-sm md:text-lg">اللي تشمره بالنهر يروح ببطنك </h3>
+          <h3 className="font-semibold  text-sm md:text-lg">اين تذهب نفايات الانهار</h3>
          <p className="text-xs text-gray3 text-justify ">منطقتك فمدينتك مساهمة بسيطة تصنع الفرق منطقتك فمدينتك مساهمة بسيطة تصنع الفرق </p>
         </div>
       </div>

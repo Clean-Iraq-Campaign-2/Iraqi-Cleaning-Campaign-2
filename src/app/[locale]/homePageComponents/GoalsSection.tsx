@@ -31,7 +31,7 @@ export const GoalsSection = () => {
     },
   ]
   return (
-    <section className="w-screen py-24">
+    <section className="w-screen py-20">
         <Container>
         <div className="grid md:grid-cols-3 grid-cols-1 place-items-center bg-primary bg-opacity-5 py-10 rounded-xl">
             {CONTENT.map((item)=>(
