@@ -8,7 +8,7 @@ import { BlogList } from "./BlogList";
 export const BlogSection = () => {
       const list=[{},{},{},{},{},{}]
   return (
-    <section className="py-10 w-screen overflow-hidden ">
+    <section className="py-4 w-screen overflow-hidden ">
       <Container>
       <div className="flex justify-between px-5 items-center">
           <Link className="underline" href={ROUTES.blog}>المدونة</Link>

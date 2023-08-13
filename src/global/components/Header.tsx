@@ -32,10 +32,10 @@ export default function Header() {
 
   ]
   return (
-      <header className='fixed top-0 left-0 bg-gradient-to-b from-gray2 to-transparent bg-opacity-40 backdrop-filter backdrop-blur-sm shadow-md z-50 p-2 w-screen px-10' > 
+      <header className='fixed top-0 left-0 right-0 mx-auto bg-light z-50 p-2 px-5 md:px-2  w-[98%] md:w-[90%] rounded' > 
       {isTabletOrMobile?(
         <div>
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center w-full'>
          <BurgerIcon toggleNav={toggleNav}/>
            <Logo/>
         </div>
@@ -62,7 +62,7 @@ const InLineNav = ({ HEADER_NAV }: { HEADER_NAV: NavItem[] }) => {
       {HEADER_NAV.map((item) => {
          const isActive = pathname === item.link
         return (
-          <Link href={item.link} key={item.link} className= {`font-medium text-lg hover:text-secondary ${isActive ? 'text-secondary' : 'text-light'}`} >{item.text}</Link>
+          <Link href={item.link} key={item.link} className= {`text-black font-medium text-lg hover:text-secondary ${isActive ? 'text-black' : 'text-gray3'}`} >{item.text}</Link>
       )})}
     </nav>
   );
@@ -86,7 +86,7 @@ const BoxNav = ({ HEADER_NAV ,isNavOpen}: { HEADER_NAV: NavItem[] ,isNavOpen:boo
   );
 };
 const BurgerIcon=({toggleNav}:{toggleNav:()=>void})=>{
-  return (<FontAwesomeIcon icon={faBars} size="lg" onClick={toggleNav} color='white'/>)
+  return (<FontAwesomeIcon icon={faBars} size="lg" onClick={toggleNav} color='gray2'/>)
 }
 
 

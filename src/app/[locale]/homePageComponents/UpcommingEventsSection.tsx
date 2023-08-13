@@ -3,18 +3,25 @@ import { SectionTitle } from "@/global/components/SectionTitle";
 import Link from "next/link";
 import { ROUTES } from "@/app/routes";
 import { UpcommingEventsList } from "../../../global/components/upcommingEvents/UpcommingList";
+import { useMediaQuery } from "@react-hook/media-query";
 
 export const UpcommingEventsSection = () => {
-      const list=[{},{},{},{},{},{}]
+      const list=[{},{},{},{},{},{}];
+      const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
   return (
     <section className="py-10 w-screen overflow-hidden ">
-      <Container>
+      {isTabletOrMobile?(<><div className="flex justify-between px-5 items-center">
+          <Link className="underline" href={ROUTES.campaigns}>جميع الحملات</Link>
+          <SectionTitle text="الحملات القادمة"/>
+      </div>
+           <UpcommingEventsList upcommingList={list}/></>):(<Container>
       <div className="flex justify-between px-5 items-center">
           <Link className="underline" href={ROUTES.campaigns}>جميع الحملات</Link>
           <SectionTitle text="الحملات القادمة"/>
       </div>
            <UpcommingEventsList upcommingList={list}/>
-     </Container>
+     </Container>)}
+
     </section>
   )
 }

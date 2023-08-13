@@ -25,7 +25,7 @@ export const AwernessSection = () => {
     {!isTabletOrMobile? (<div className="absolute w-1/3 h-1/3 top-0  z-[-1] bottom-0 my-auto bg-transparent border-gray-1 rounded-2xl border-8 border-opacity-5 left-0 right-0 mx-auto"></div>
      ):(<div></div>)} 
        <Container>
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-4">
      {CONTENT.map((item,index)=>(
        isTabletOrMobile?(<SectionRowMobile key={index} item={item} index={index}/>):
        (<SectionRow key={index} item={item} index={index}/>) 
@@ -42,7 +42,7 @@ const SectionRow=({item,index }:{item:AwernessItem,index:number})=>{
     <div style={{direction:"rtl"}} className={`flex ${isOdd ? "flex-row" : "flex-row-reverse"} gap-16 justify-between`}>
       <Image src={item.image} alt="campaign image" className="w-[45%] rounded-lg" />
        <div className={`flex flex-col  gap-4  h-full py-10 w-[50%] ${isOdd?'mt-auto mb-8':'mb-auto mt-8'}`}>
-         <h2 className="text-2xl text-primary font-bold">{item.title}</h2>
+         <h2 className="text-3xl text-primary font-bold">{item.title}</h2>
          <p className="text-xl text-justify text-gray2 ">{item.description}</p>
         </div>
     </div>

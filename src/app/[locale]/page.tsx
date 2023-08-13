@@ -11,13 +11,12 @@ import { VideoSection } from './homePageComponents/VideoSection';
 export default function Home() {
     const t = useTranslations('Index');
   return (
-    <main className=" min-h-screen w-screen items-center justify-center">
+    <main className=" min-h-screen w-screen items-center justify-center overflow-hidden">
       <HeroSection/>
       <UpcommingEventsSection/>
       <AwernessSection/>
       <GoalsSection/>
       <VideoSection/>
-      <StatisticsSection/>
       <BlogSection/>
     </main>
   )

@@ -7,7 +7,7 @@ import { PreviousCampaign } from './components/PreviousCampaign';
 export default function Campaigns() {
     const t = useTranslations('Index');
   return (
-    <main className=" min-h-screen w-screen items-center justify-center">
+    <main className=" min-h-screen w-screen items-center justify-center overflow-hidden">
       <CampaignsHero/> 
       <Upcomming/>
       <PreviousCampaign/>  
