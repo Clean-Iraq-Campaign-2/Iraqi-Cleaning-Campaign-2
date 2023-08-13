@@ -10,8 +10,12 @@ import plastic from "../Assets/plastic.png"
 import styles from "../Assets/css.module.css"
 const WhoWeAreSection = () => {
   return (
-    <section className='min-h-screen  flex flex-col items-center  p-8 pl-9 pr-9 bg-white   '>
+    <section id='whoweare' className='min-h-screen  flex flex-col items-center  p-8 pl-9 pr-9 bg-white '>
+
       <div className='flex  lg:flex-row md:flex-col 2sm:flex-col justify-center items-center h-full    '>
+     <div className='mr-[4rem]'>
+     </div>
+
         <div className='flex lg:w-2/5 	 bg-transparent border-[0.2rem] border-gray-500  w-[20rem] h-[20rem] md:w-[17rem] md:h-[17rem] 2sm:w-[10rem] 2sm:h-[10rem] mr-[5rem] lg:ml-[4rem] relative 2sm:ml-[4rem]' >
            <Image src={WhoWeAreSectionphoto1} alt='photo' className='absolute w-[9rem] h-[12rem] md:w-[7rem] md:h-[10rem] 2sm:w-[5rem] 2sm:h-[5rem]  top-[2rem] right-[77%]' />
            <Image src={WhoWeAreSectionphoto4} alt='photo' className='absolute w-[10.5rem] h-[7rem] md:w-[8rem] md:h-[6rem] 2sm:w-[6rem] 2sm:h-[4rem] top-[-14%] left-[70%]' />

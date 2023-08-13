@@ -94,7 +94,7 @@ const MeetOurTeamSection = () => {
         })
     }
   return (
-    <section className='min-h-screen flex flex-col  items-center p-8 pl-9 pr-9 bg-[#fbfbfbd9]'>
+    <section id='OurTeam' className='min-h-screen flex flex-col  items-center p-8 pl-9 pr-9 bg-[#fbfbfbd9]'>
       <h1 className='xl:text-[4rem] lg:text-[3.5rem] md:text-[3rem] 2sm:text-[2.0rem] 2sm:mt-[4rem] text-primary font-bold'>التقي بفريقنا</h1>
       <div className=' xl:block lg:block md:block 2sm:hidden xl:w-[30rem] lg:w-[28rem] md:w-[25rem] 2sm:w-[13rem]  h-[0.10rem] bg-[#287195] mt-[2rem]'></div>
       <div className='h-3/4 w-full  flex xl:flex-row lg:flex-row md:flex-row 2sm:flex-col justify-center items-center '>
