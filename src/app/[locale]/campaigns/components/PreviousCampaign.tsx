@@ -67,7 +67,7 @@ const SectionRow=({item,index }:{item:Campaign,index:number})=>{
     return (
     <div className={`flex ${isOdd ? "flex-row" : "flex-row-reverse"} gap-10`}>
       <Image src={item.image} alt="campaign image" className="w-[48%] rounded-lg" />
-       <div className="flex flex-col items-end gap-4  h-full py-10 w-[50%]">
+       <div className="flex flex-col items-end gap-6  h-full py-10 w-[50%]">
         <h2 className="text-5xl text-gray3 font-bold opacity-25">{item.year}</h2>
          <h2 className="text-2xl text-gray2 font-bold">{item.title}</h2>
          <div className="flex gap-14">
@@ -85,7 +85,6 @@ const SectionRow=({item,index }:{item:Campaign,index:number})=>{
             </div>
          </div>
          <p className="text-lg text-gray3 text-end">{item.description}</p>
-         <OutlinedButton text="تفاصيل" onClick={()=>{}}/>
         </div>
     </div>
   );
@@ -113,7 +112,6 @@ const SectionRowMobile=({item,index }:{item:Campaign,index:number})=>{
             </div>
          </div>
          <p className="text-md text-gray3 py-4">{item.description}</p>
-         <OutlinedButton text="تفاصيل" onClick={()=>{}}/>
         </div>
     </div>
   );

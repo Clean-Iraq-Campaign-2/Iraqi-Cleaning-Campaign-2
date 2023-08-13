@@ -62,7 +62,7 @@ const InLineNav = ({ HEADER_NAV }: { HEADER_NAV: NavItem[] }) => {
       {HEADER_NAV.map((item) => {
          const isActive = pathname === item.link
         return (
-          <Link href={item.link} key={item.link} className= {`text-white font-medium text-lg hover:text-primary ${isActive ? 'text-secondary' : 'text-white'}`} >{item.text}</Link>
+          <Link href={item.link} key={item.link} className= {`font-medium text-lg hover:text-secondary ${isActive ? 'text-secondary' : 'text-light'}`} >{item.text}</Link>
       )})}
     </nav>
   );

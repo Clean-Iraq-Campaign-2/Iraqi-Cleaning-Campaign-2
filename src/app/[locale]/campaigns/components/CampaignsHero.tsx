@@ -15,8 +15,9 @@ export const CampaignsHero = () => {
 }
 
   return (
-    <section className=" relative w-screen h-96 md:h-[32rem] bg-black text-light text-end">
-    <Image src={HeroImage} alt="" className=" absolute  w-full h-full object-cover opacity-40"/>
+    <section className=" relative w-screen h-96 md:h-[40rem] text-light text-end">
+    <Image src={HeroImage} alt="" className=" absolute  w-full h-full object-cover"/>
+    <div className=" absolute top-0 w-full h-full bg-black bg-opacity-50 "></div>
     <div className="absolute my-20 md:my-32 top-0 w-full">
         <Container>
             <div className="flex  flex-col-reverse gap-10  items-center md:flex-row justify-between">
