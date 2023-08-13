@@ -1,5 +1,7 @@
 import Image, { StaticImageData } from "next/image"
 import CampaignImage from "../assets/yello-cleaning.png";
+import Campaigns1 from "../assets/cleaning-10.jpeg";
+import Campaigns2 from "../assets/cleaning-15.jpeg";
 import {useTranslations} from 'next-intl';
 import { useMediaQuery } from '@react-hook/media-query';
 import { Container } from "@/global/components/Container";
@@ -29,7 +31,7 @@ export const PreviousCampaign = () => {
     },
       {year:2022,
     title:"جسر باب المعضم",
-    image:CampaignImage,
+    image:Campaigns1,
     description:' مساهمتك في نضافة بلدك تبدا من بيتك ,الشارع ,منطقتك فمدينتك مساهمة بسيطة تصنع الفرق مساهمتك في نضافة بلدك تبدا من بيتك ,الشارع ,منطقتك فمدينتك مساهمة بسيطة تصنع الفرق ',
     distance:32,
     volunteers:400,
@@ -37,7 +39,7 @@ export const PreviousCampaign = () => {
     },
       {year:2022,
     title:"جسر باب المعضم",
-    image:CampaignImage,
+    image:Campaigns2,
     description:' مساهمتك في نضافة بلدك تبدا من بيتك ,الشارع ,منطقتك فمدينتك مساهمة بسيطة تصنع الفرق مساهمتك في نضافة بلدك تبدا من بيتك ,الشارع ,منطقتك فمدينتك مساهمة بسيطة تصنع الفرق ',
     distance:32,
     volunteers:400,
@@ -64,8 +66,8 @@ const SectionRow=({item,index }:{item:Campaign,index:number})=>{
     const isOdd = index % 2 !== 0;
     return (
     <div className={`flex ${isOdd ? "flex-row" : "flex-row-reverse"} gap-10`}>
-      <Image src={item.image} alt="campaign image" className="w-[45%] rounded-lg" />
-       <div className="flex flex-col items-end gap-4  h-full py-10 w-[40%]">
+      <Image src={item.image} alt="campaign image" className="w-[48%] rounded-lg" />
+       <div className="flex flex-col items-end gap-4  h-full py-10 w-[50%]">
         <h2 className="text-5xl text-gray3 font-bold opacity-25">{item.year}</h2>
          <h2 className="text-2xl text-gray2 font-bold">{item.title}</h2>
          <div className="flex gap-14">

@@ -14,7 +14,7 @@ export const Logo = () => {
         onClick={() => {router.push(ROUTES.home)}}
         src={logo}
         alt="logo"
-        className={`rounded-full ${isTabletOrMobile ? 'w-10 h-10' : ' w-14 h-14'}`}
+        className={`rounded-full cursor-pointer ${isTabletOrMobile ? 'w-10 h-10' : ' w-16 h-16'}`}
       />
   )
 }

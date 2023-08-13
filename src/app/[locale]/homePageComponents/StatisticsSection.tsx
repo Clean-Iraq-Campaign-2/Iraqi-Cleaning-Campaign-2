@@ -20,7 +20,7 @@ export const StatisticsSection = () => {
   useEffect(() => {
     const onScroll = () => {
       const element = document.getElementById('statisticsSection');
-      if (element && !animationPlayed && isElementInViewport(element)) {
+      if (element && !animationPlayed ) {
         setAnimationPlayed(true);
       }
     };
@@ -30,16 +30,6 @@ export const StatisticsSection = () => {
       window.removeEventListener('scroll', onScroll);
     };
   }, [animationPlayed]);
-
-  const isElementInViewport = (element: HTMLElement) => {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  };
 
   return (
     <section

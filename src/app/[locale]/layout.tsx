@@ -1,18 +1,16 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import {NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
 import Header from '@/global/components/Header';
 import Footer from '@/global/components/footer/Footer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
  
 export function generateStaticParams() {
   return [{locale: 'en'}, {locale: 'ar'}];
 }
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -35,7 +33,10 @@ export default async function RootLayout({
   }
   return (
     <html lang="en">
-      <body className="bg-light">
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" />  
+      </head>
+      <body className="bg-light font-ibm-plex-sans-arabic">
       <NextIntlClientProvider locale={locale} messages={messages}>
         <Header/>
         {children}

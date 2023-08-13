@@ -18,6 +18,9 @@ module.exports = {
         gray3:'#A49F9F',
         gray4:'#C3BFBF',
       },
+      fontFamily: {
+        'ibm-plex-sans-arabic': ['IBM Plex Sans Arabic', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
