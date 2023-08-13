@@ -9,6 +9,7 @@ import { useMediaQuery } from '@react-hook/media-query';
 import { useState } from 'react';
 import { Logo } from './Logo';
 import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 interface NavItem {
   text: string;
@@ -17,7 +18,7 @@ interface NavItem {
 export default function Header() {
   const t = useTranslations('Index');
   const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
-  const router = useRouter()
+  const router = useRouter();
   const [isNavOpen, setIsNavOpen] = useState(false);
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -33,13 +34,13 @@ export default function Header() {
   return (
       <header className='fixed top-0 left-0 bg-gradient-to-b from-gray2 to-transparent bg-opacity-40 backdrop-filter backdrop-blur-sm shadow-md z-50 p-2 w-screen px-10' > 
       {isTabletOrMobile?(
-        <>
-        <div className='flex justify-between'>
+        <div>
+        <div className='flex justify-between items-center'>
          <BurgerIcon toggleNav={toggleNav}/>
            <Logo/>
         </div>
         <BoxNav HEADER_NAV={HEADER_NAV} isNavOpen={isNavOpen}/>
-        </>
+        </div>
       ):(
         <div className='flex justify-between items-center'>
           <MainButton text="انضم ويانه" onClick={()=>{router.push(ROUTES.join)}}/>
@@ -55,11 +56,14 @@ export default function Header() {
 }
 
 const InLineNav = ({ HEADER_NAV }: { HEADER_NAV: NavItem[] }) => {
+  const pathname = usePathname()
   return (
     <nav className='flex gap-6'>
-      {HEADER_NAV.map((item) => (
-          <Link href={item.link} key={item.link} className='text-white font-medium text-lg hover:text-primary'>{item.text}</Link>
-      ))}
+      {HEADER_NAV.map((item) => {
+         const isActive = pathname === item.link
+        return (
+          <Link href={item.link} key={item.link} className= {`text-white font-medium text-lg hover:text-primary ${isActive ? 'text-secondary' : 'text-white'}`} >{item.text}</Link>
+      )})}
     </nav>
   );
 };
@@ -70,24 +74,19 @@ const BoxNav = ({ HEADER_NAV ,isNavOpen}: { HEADER_NAV: NavItem[] ,isNavOpen:boo
   <nav className='absolute mt-10 top-0'>
       
         <div className={`flex flex-col p-6 text-center bg-white shadow-md rounded-lg ${isNavOpen ? 'block' : 'hidden'}`}>
-          {HEADER_NAV.map((item) => (
-       <Link key={item.text} href={item.link} className="text-gray1 hover:text-primary">
+          {HEADER_NAV.map((item) => {
+             
+            return (
+            <Link key={item.text} href={item.link} className="text-gray1 hover:text-primary">
             {item.text}
           </Link>
-      ))}  
+      )})}  
         </div>
  </nav>
   );
 };
 const BurgerIcon=({toggleNav}:{toggleNav:()=>void})=>{
-  return (<button
-            className="text-white focus:outline-none"
-            onClick={toggleNav}
-            aria-label="Toggle Navigation"
-            >
-        <FontAwesomeIcon icon={faBars} size="lg" />
-          </button>
-          )
+  return (<FontAwesomeIcon icon={faBars} size="lg" onClick={toggleNav} color='white'/>)
 }
 
 

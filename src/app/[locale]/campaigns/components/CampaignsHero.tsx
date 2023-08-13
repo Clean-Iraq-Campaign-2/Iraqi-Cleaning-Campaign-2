@@ -33,8 +33,8 @@ export const CampaignsHero = () => {
                         
                 </div>
                 <div className="flex flex-col gap-2 items-center md:items-end  px-4 md:px-20  text-center md:text-end">
-                    <h1 className="text-2xl md:text-3xl ">{HERO_CONTENT.title}</h1>
-                    <p className="text-xs md:text-lg font-thin ">{HERO_CONTENT.subTitle}</p>
+                    <h1 className="text-2xl md:text-4xl ">{HERO_CONTENT.title}</h1>
+                    <p className="text-xs md:text-xl font-normal ">{HERO_CONTENT.subTitle}</p>
                 </div>
             </div>
     </Container>

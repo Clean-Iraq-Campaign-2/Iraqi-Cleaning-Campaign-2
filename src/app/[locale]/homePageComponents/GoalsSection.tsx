@@ -5,9 +5,9 @@ import IInspire from "../homeAssets/iinspire.png";
 import {useTranslations} from 'next-intl';
 import { useMediaQuery } from '@react-hook/media-query';
 import { Container } from "@/global/components/Container";
+import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import StatsBgImage from "../../[locale]/homeAssets/potaintal-home.jpeg";
-
 
 export const GoalsSection = () => {
   const t = useTranslations('Index');
@@ -17,47 +17,34 @@ export const GoalsSection = () => {
     {
     title:"نلهم",
     Icon:IInspire,
-    paragraph:"كل شيء نسبي في الحياة ، ومهما ساءت الأمور فليست شرا كلها ، ولن تجد الناس جميعا يجمعون على أمر واحد  "
+    paragraph:"الهدف من حملات التنضيف هو ايصال رسالة لكل شخص  يرمي النفايات في الشارع والانهار والتوعية بهذا الشان"
     },
     {
       title:"نتعهد",
       Icon:IPromise,
-      paragraph:"كل شيء نسبي في الحياة ، ومهما ساءت الأمور فليست شرا كلها ، ولن تجد الناس جميعا يجمعون على أمر واحد عن قضاياه"
+      paragraph:"نحن لا نهدف الى عمل حملات ولكن الى زرع عادات فينا ونتعهد بالاستمرار"
     },
     {
     title:"ننضف",
     Icon:IClean,
-    paragraph:"كل شيء نسبي في الحياة ، ومهما ساءت الأمور فليست شرا كلها ، ولن تجد الناس جميعا يجمعون على أمر واحد عن قضاياه"
+    paragraph:"نحاول دائما جعل ما حولنا نضيف نبدا من البيت وننتهي ببلد اجمل "
     },
   ]
   return (
-    <section className="w-screen pt-20">
+    <section className="w-screen py-24">
         <Container>
-        <div className="grid md:grid-cols-3 grid-cols-1 place-items-center">
+        <div className="grid md:grid-cols-3 grid-cols-1 place-items-center bg-primary bg-opacity-5 py-10 rounded-xl">
             {CONTENT.map((item)=>(
             <div key={item.title} className="flex flex-col gap-4  place-items-center">
                <Image src={item.Icon} alt="icon" className="w-20 h-20"/>
                <h2 className="text-3xl font-semibold text-secondary">{item.title}</h2>
-               <p className="px-10 text-center text-gray1">{item.paragraph}</p>
+               <p className="px-10 md:px-20 text-center text-gray1">{item.paragraph}</p>
             </div>
             ))}
             </div>
         </Container>
-            <div className=" relative w-full h-96  bg-gray4 mt-32 ">
-               <Image
-        src={StatsBgImage}
-        alt=""
-        className="absolute w-full h-full object-cover opacity-5"
-      />
-              <div className=" absolute top-[-70px] rounded-xl overflow-hidden w-full md:w-1/2 left-0 right-0 mx-auto object-fill">
-              <ReactPlayer 
-              playing={false}
-              url={VIDEO_URL}
-              width={500}
-              height={270}
-              />
-              </div>
-        </div>
     </section>
   )
 }
+
+

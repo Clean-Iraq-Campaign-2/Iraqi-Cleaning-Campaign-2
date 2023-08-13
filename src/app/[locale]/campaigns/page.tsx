@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image'
 import {useTranslations} from 'next-intl';
 import { CampaignsHero } from './components/CampaignsHero';
 import { Upcomming } from './components/Upcomming';
