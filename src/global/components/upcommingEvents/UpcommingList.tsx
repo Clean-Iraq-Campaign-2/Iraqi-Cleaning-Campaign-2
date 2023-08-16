@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import UpcommingCard from "./UpcoomingCard";
+import { carouselResponsiveSetting } from "@/global/utils/carouselResponsiveSetting";
 function SampleNextArrow(props:any) {
   const { className, style, onClick } = props;
   return (
@@ -50,41 +51,12 @@ export const UpcommingEventsList = ({upcommingList}:{upcommingList:{}[]}) => {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 6,
+      slidesToShow: 4,
       slidesToScroll: 1,
       initialSlide: 0,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
-      responsive: [
-        {
-          breakpoint: 1450,
-          settings: {
-            slidesToShow: 5,
-            infinite: false,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            infinite: false,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-          }
-        }
-      ]
+      responsive: carouselResponsiveSetting
     };
 
     return (

@@ -9,7 +9,7 @@ export const UpcommingEventsSection = () => {
       const list=[{},{},{},{},{},{}];
       const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
   return (
-    <section className="py-10 w-screen overflow-hidden ">
+    <section className="py-10 w-screen overflow-hidden text-gray2 font-normal px-4 ">
       {isTabletOrMobile?(<><div className="flex justify-between px-5 items-center">
           <Link className="underline" href={ROUTES.campaigns}>جميع الحملات</Link>
           <SectionTitle text="الحملات القادمة"/>

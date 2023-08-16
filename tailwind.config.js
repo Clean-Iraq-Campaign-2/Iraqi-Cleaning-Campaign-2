@@ -9,9 +9,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize:{
+        '2xs': '.650rem',
+      },
         colors:{
         primary:"#3FACE3",
         secondary:'#69B184',
+        nutral:"#F3F7F5",
         light:'#FFFDFA',
         gray1:'#333333',
         gray2:'#4B4B4B',

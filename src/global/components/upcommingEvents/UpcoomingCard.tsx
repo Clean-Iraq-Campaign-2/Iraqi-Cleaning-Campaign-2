@@ -16,7 +16,7 @@ export default function UpcommingCard({isEven}:{isEven:boolean}) {
     return (
       <div className="mx-2 md:mx-4 my-6">
     <div className="flex w-full flex-col bg-white rounded-xl  bg-opacity-60 overflow-hidden shadow-lg shadow-slate-200">
-        <div className={`flex flex-col py-1 text-center text-md md:text-2xl font-bold text-white ${isEven?' bg-gray1':'bg-primary'}`}>
+        <div className="flex flex-col py-1 text-center text-md md:text-2xl font-bold text-gray4 bg-nutral">
           <p>7 july</p>
           <p>2023</p>
         </div>
@@ -27,10 +27,10 @@ export default function UpcommingCard({isEven}:{isEven:boolean}) {
            </div>
         </div>
         <div className="flex flex-col gap-1 items-end text-gray1 px-6 py-2">
-          <h3 className="font-semibold self-center text-sm md:text-xl">جسر ابو نؤاس </h3>
+          <h3 className="font-semibold text-sm md:text-xl">جسر ابو نؤاس </h3>
           <div className="flex gap-2 items-center text-sm"> <span> 5:00 pm</span><FontAwesomeIcon icon={faClock} className="text-secondary"/></div>
           <div className="flex gap-2 items-center"> <Link href={mapUrl} key={mapUrl} className="underline">الموقع</Link><FontAwesomeIcon icon={faMapPin} className="text-secondary"/></div>
-          <button className="bg-transparent border border-secondary rounded-md text-secondary font-normal px-2 self-center text-md my-2"
+          <button className="bg-transparent border border-secondary rounded-md text-secondary font-normal px-2  text-md my-2"
           onClick={()=>{router.push(ROUTES.join)}}
           >انضم للحملة</button>
         </div>
