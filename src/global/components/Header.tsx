@@ -32,9 +32,9 @@ export default function Header() {
 
   ]
   return (
-      <header className='fixed top-0 left-0 right-0 mx-auto bg-light z-50 p-2 px-5 md:px-2  w-[98%] md:w-[90%] rounded' > 
+      <header className='fixed top-0 left-0 right-0 mx-auto w-full bg-light z-50 p-2 px-5 md:px-2  rounded' > 
       {isTabletOrMobile?(
-        <div>
+        <div className=' w-[98%] md:w-[90%] mx-auto'>
         <div className='flex justify-between items-center w-full'>
          <BurgerIcon toggleNav={toggleNav}/>
            <Logo/>
@@ -42,7 +42,7 @@ export default function Header() {
         <BoxNav HEADER_NAV={HEADER_NAV} isNavOpen={isNavOpen}/>
         </div>
       ):(
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center  w-[98%] md:w-[90%] mx-auto'>
           <MainButton text="انضم ويانه" onClick={()=>{router.push(ROUTES.join)}}/>
           <div className='flex items-center gap-6'>
             <InLineNav HEADER_NAV={HEADER_NAV}/>

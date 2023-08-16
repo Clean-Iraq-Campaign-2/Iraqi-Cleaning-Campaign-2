@@ -31,14 +31,14 @@ export const GoalsSection = () => {
     },
   ]
   return (
-    <section className="w-screen py-20">
+    <section className="w-screen py-10 md:py-20 bg-nutral mb-4 md:mb-10">
         <Container>
-        <div className="grid md:grid-cols-3 grid-cols-1 place-items-center bg-primary bg-opacity-5 py-10 rounded-xl">
+        <div className="grid md:grid-cols-3 grid-cols-1 px-10 gap-y-10 place-items-center py-10 rounded-xl">
             {CONTENT.map((item)=>(
             <div key={item.title} className="flex flex-col gap-4  place-items-center">
                <Image src={item.Icon} alt="icon" className="w-20 h-20"/>
                <h2 className="text-3xl font-semibold text-secondary">{item.title}</h2>
-               <p className="px-10 md:px-20 text-center text-gray1">{item.paragraph}</p>
+               <p className="px-4 text-center text-gray1">{item.paragraph}</p>
             </div>
             ))}
             </div>

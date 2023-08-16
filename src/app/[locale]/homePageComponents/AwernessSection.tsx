@@ -22,7 +22,7 @@ export const AwernessSection = () => {
   ]
   return (
     <section className=" relative w-screen py-10">
-    {!isTabletOrMobile? (<div className="absolute w-1/3 h-1/3 top-0  z-[-1] bottom-0 my-auto bg-transparent border-gray-1 rounded-2xl border-8 border-opacity-5 left-0 right-0 mx-auto"></div>
+    {!isTabletOrMobile? (<div className="absolute w-1/3 md:h-1/4  lg:h-1/3 lg:w-1/3 top-0  z-[-1] bottom-0 my-auto bg-transparent border-gray1-1 rounded-2xl border-8 border-gray4 border-opacity-30 left-0 right-0 mx-auto"></div>
      ):(<div></div>)} 
        <Container>
     <div className="flex flex-col gap-4">
@@ -40,10 +40,10 @@ const SectionRow=({item,index }:{item:AwernessItem,index:number})=>{
     const isOdd = index % 2 !== 0;
     return (
     <div style={{direction:"rtl"}} className={`flex ${isOdd ? "flex-row" : "flex-row-reverse"} gap-16 justify-between`}>
-      <Image src={item.image} alt="campaign image" className="w-[45%] rounded-lg" />
-       <div className={`flex flex-col  gap-4  h-full py-10 w-[50%] ${isOdd?'mt-auto mb-8':'mb-auto mt-8'}`}>
-         <h2 className="text-3xl text-primary font-bold">{item.title}</h2>
-         <p className="text-xl text-justify text-gray2 ">{item.description}</p>
+      <Image src={item.image} alt="campaign image" className="w-[45%] rounded-lg object-cover" />
+       <div className={`flex flex-col  gap-4 h-full py-10 w-[50%] ${isOdd?'mt-auto mb-0 pb-0':'mb-auto mt-0 pb-0'}`}>
+         <h2 className="text-xl md:text-xl lg:text-3xl text-gray2 font-bold">{item.title}</h2>
+         <p className="text-md md:text-sm lg:text-lg xl:text-xl text-justify text-gray2 ">{item.description}</p>
         </div>
     </div>
   );
@@ -54,7 +54,7 @@ const SectionRowMobile=({item,index }:{item:AwernessItem,index:number})=>{
     <div className=" flex flex-col w-full">
       <Image src={item.image} alt="campaign image" className="w-[90%] mx-auto rounded-md " />
        <div className=" flex flex-col gap-4  py-10 w-[80%] rounded-lg my-auto px-5 mx-auto text-center">
-         <h2 className="text-2xl text-primary font-bold">{item.title}</h2>
+         <h2 className="text-xl text-gray2 font-bold">{item.title}</h2>
          <p className="text-sm text-gray2">{item.description}</p>
         </div>
     </div>
