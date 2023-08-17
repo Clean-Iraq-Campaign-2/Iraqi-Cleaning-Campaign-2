@@ -5,18 +5,18 @@ import CampaignMessageSection from './AboutUs-Components/CampaignMessageSection'
 import WhatDoWeDoSection from "./AboutUs-Components/WhatDoWeDoSection"
 import MeetOurTeamSection from "./AboutUs-Components/MeetOurTeamSection"
 import NavigationAboutUs from './AboutUs-Components/NavigationAboutUs'
-
+import MediaBlog from "./AboutUs-Components/MediaBlog"
 const AboutUs = () => {
   
-  return (
-    <main className=" min-h-screen pt-27 box-border	scroll-smooth	overflow-x-hidden	 ">
+  return (    <main className=" min-h-screen pt-27 box-border	scroll-smooth	overflow-x-hidden	 ">
+        <NavigationAboutUs  />
         <HeroSection />
         <WhoWeAreSection />
         <CampaignMessageSection />
-        <WhatDoWeDoSection />
         <MeetOurTeamSection />
-        
+        <MediaBlog />
     </main>
+
   )
 }
 

@@ -10,6 +10,7 @@ import emailmarketing from "../Assets/emailmarketing.png"
 import user from "../Assets/user.png"
 import conversation from "../Assets/conversation.png"
 import Link from 'next/link'
+import socialweb from "../Assets/socialweb.png"
 const NavigationAboutUs = () => {
   const navigationbar=[
     {
@@ -35,15 +36,15 @@ const NavigationAboutUs = () => {
     },
     {
       id:4,
-      image:user,
-      title:"شنو نسوي",
-      to:"#WhatWeDo"
-    },
-    {
-      id:5,
       image:conversation,
       title:"التقي بفريقنا",
       to:"#OurTeam"
+    },
+    {
+      id:5,
+      image:socialweb,
+      title:"اعلام",
+      to:"#MediaBlog"
     }
   ]
   const [selectedId, setSelectedId] = useState(1);
