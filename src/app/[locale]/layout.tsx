@@ -34,7 +34,8 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" />  
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" />
+        <link rel="stylesheet" href="../[locale]/campaigns/components/previousCampaigns/timeline/style.css" />  
       </head>
       <body className="bg-light font-ibm-plex-sans-arabic">
       <NextIntlClientProvider locale={locale} messages={messages}>

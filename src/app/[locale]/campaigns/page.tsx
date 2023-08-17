@@ -2,7 +2,7 @@
 import {useTranslations} from 'next-intl';
 import { CampaignsHero } from './components/CampaignsHero';
 import { Upcomming } from './components/Upcomming';
-import { PreviousCampaign } from './components/PreviousCampaign';
+import { PreviousCampaign } from './components/previousCampaigns/PreviousCampaign';
 
 export default function Campaigns() {
     const t = useTranslations('Index');
