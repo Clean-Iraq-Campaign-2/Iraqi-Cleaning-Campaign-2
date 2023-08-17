@@ -13,7 +13,7 @@ import trashcollector from "../Assets/trashcollector.png"
 import styles from "../Assets/css.module.css"
 const WhatDoWeDoSection = () => {
   return (
-    <section id='WhatWeDo' className='min-h-screen  flex flex-col  items-center   p-8 pl-9 pr-9 bg-[#fbfbfbd9] '>
+    <section id='WhatWeDo' className='min-h-screen  flex flex-col  items-center w-[98%] md:w-[90%]  mx-auto mt-5 rounded-3xl   p-8 pl-9 pr-9 bg-[#fbfbfbd9] '>
         <div className='h-1/2 w-full flex justify-center items-center mt-[4rem]'>
             <div className='w-6/12 flex flex-col  justify-end text-right items-end xl:ml-[1trem] lg:mr-[5rem] xl:inline lg:inline	md:hidden  2sm:hidden	  '>
                 <div className='xl:w-[16rem] xl:h-[23rem] lg:w-[14rem] lg:h-[21rem] md:w-[12rem] md:h-[19rem] 2sm:w-[7rem] 2sm:h-[10rem] xl:mr-[10rem] lg:mr-[20rem] md:ml-[10rem] relative '>
