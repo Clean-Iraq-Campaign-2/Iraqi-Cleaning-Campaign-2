@@ -50,9 +50,9 @@ function page() {
   };
 
   return (
-    <div className="mt-20 mb-80">
-      <div className=" flex justify-center items-center h-screen mt-20">
-        <div className="w-1/3 h-full relative">
+    <div className="min-h-screen pt-27 box-border    overflow-x-hidden ">
+      <div className=" min-h-screen  flex justify-center items-center overflow-hidden  mt-20">
+        <div className="w-1/3 relative">
           <div className="words absolute top-0 left-0 flex flex-col justify-around h-full items-end text-overlay w-full p-4">
             <div className="flex w-full">
               <div className="w-1/2"></div>
@@ -80,7 +80,7 @@ function page() {
             </div>
           </div>
 
-          <Image src={bgimg} alt="" className="h-full w-full object-cover" />
+          <Image src={bgimg} alt="" className="h-full w-full object-cover hidden lg:block" />
         </div>
 
         <div className="w-2/3 h-full p-10">
@@ -209,7 +209,7 @@ function page() {
                     as="select"
                     className="text-right border-b-2 border-gray-400 border-opacity-50 focus:border-black focus:outline-none focus:shadow-md transition-shadow duration-300  m-5 w-72 lg:w-96 bg-transparent"
                   >
-                    <option disabled  value="">
+                    <option disabled value="">
                       اختر
                     </option>
                     <option value="Baghdad">بغداد</option>
