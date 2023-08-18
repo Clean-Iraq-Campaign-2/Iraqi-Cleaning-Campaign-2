@@ -10,7 +10,6 @@ export default function Campaigns() {
     <main className=" min-h-screen w-screen items-center justify-center overflow-hidden">
       <CampaignsHero/> 
       <Upcomming/>
-      <PreviousCampaign/>  
     </main>
   )
 }
