@@ -1,11 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import {NextIntlClientProvider} from 'next-intl';
-import {notFound} from 'next/navigation';
+//import  notFound  from 'next/router';
 import Header from '@/global/components/Header';
 import Footer from '@/global/components/footer/Footer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useRouter } from 'next/router';
 
  
 export function generateStaticParams() {
@@ -18,18 +19,18 @@ export const metadata: Metadata = {
 }
 
 export default async function RootLayout({
-  children, params: {locale}
+  children, params: { locale }
 }: {
   children: React.ReactNode,
-    params: { locale: string };
-
+  params: { locale: string };
 }) {
-
-    let messages;
+  const router = useRouter();
+  
+  let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
   } catch (error) {
-    notFound();
+    router.replace('/404'); // Replace with your actual 404 page route
   }
   return (
     <html lang="en">
