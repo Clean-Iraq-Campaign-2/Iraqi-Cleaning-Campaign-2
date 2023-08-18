@@ -60,7 +60,7 @@ export const HeroSection = () => {
 }
   return (
     <section className=" relative  h-80 md:h-[40rem] bg-gradient-to-b from-black to-transparent text-white text-end mt-14 md:mt-20 w-[90%] mx-auto rounded-3xl bg-gray3 ">
-    <Image src={HeroImage} alt="" className="  w-full h-full object-cover z-[-1] rounded-3xl "/>
+    <Image src={HeroImage} priority={true} alt="" className="  w-full h-full object-cover z-[-1] rounded-3xl "/>
     <div className="absolute flex flex-col gap-2 items-end  px-4 md:px-40 top-0 bottom-0 my-auto h-fit right-0 text-end">
        <div className="border py-1 md:py-2 px-2 md:px-8rounded-md rounded-tl-3xl w-fit">
        <h1 className="text-sm md:text-3xl ">{HERO_CONTENT.title}</h1>

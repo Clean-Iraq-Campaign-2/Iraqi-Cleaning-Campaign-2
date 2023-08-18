@@ -29,15 +29,15 @@ function VideoPlayer({ videoUrl }:{videoUrl:string}) {
   if (!isClient) {
     return null;
   }
-  return (
-      <ReactPlayer
-      controls={true}
+  return (<></>
+      // <ReactPlayer
+      // controls={true}
       
-        playing={false}
-        url={videoUrl}
-        width="100"
-        height={400}
-        crossOrigin="anonymous"
-      />
+      //   playing={false}
+      //   url={videoUrl}
+      //   width="100"
+      //   height={400}
+      //   crossOrigin="anonymous"
+      // />
   );
 }
