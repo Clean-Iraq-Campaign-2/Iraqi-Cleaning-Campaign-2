@@ -123,9 +123,9 @@ const LatestUpdates = () => {
 
       </div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 w-full "></hr>
-      {(article.list?.map(post=>{
+      {(article.list?.map((post,index)=>{
         return(
-            <div className='w-full 2xl:h-5/6 xl:h-5/6 lg:h-5/6 md:h-5/6 2sm:h-[10rem] flex justify-end  items-end mt-[3rem] '>
+            <div key={index} className='w-full 2xl:h-5/6 xl:h-5/6 lg:h-5/6 md:h-5/6 2sm:h-[10rem] flex justify-end  items-end mt-[3rem] '>
               <div className='flex flex-col w-full h-full'>
               <div className='h-[18rem]  w-full   flex flex-row'>
             <div className='w-6/12 flex  '>
