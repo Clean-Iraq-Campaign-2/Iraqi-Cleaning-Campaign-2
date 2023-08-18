@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image"
 import Image1 from "../homeAssets/young man leaning to pick garbige.jpeg";
-import {useTranslations} from 'next-intl';
 import { useMediaQuery } from '@react-hook/media-query';
 import { Container } from "../../../global/components/Container";
 import Image2 from "../homeAssets/cleaning-11.jpeg"
@@ -10,7 +9,6 @@ interface AwernessItem {
   description:string;
 }
 export const AwernessSection = () => {
-  const t = useTranslations('Index');
   const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
   const CONTENT=[
     {title:'نضافة بلدك تبلش من يمك',

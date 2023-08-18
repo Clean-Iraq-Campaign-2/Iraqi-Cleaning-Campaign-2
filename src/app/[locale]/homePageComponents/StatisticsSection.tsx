@@ -1,12 +1,9 @@
 import Image from "next/image";
-import StatsBgImage from "../../[locale]/homeAssets/potaintal-home.jpeg";
-import { useTranslations } from 'next-intl';
-import { useMediaQuery } from '@react-hook/media-query';
+import StatsBgImage from "../../[locale]/homeAssets/potaintal-home.jpeg";import { useMediaQuery } from '@react-hook/media-query';
 import { useEffect, useState } from 'react';
 import CountUp from 'react-countup';
 
 export const StatisticsSection = () => {
-  const t = useTranslations('Index');
   const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
   const CONTENT = [
     { metric: "حملة تنضيف", number: 50 },

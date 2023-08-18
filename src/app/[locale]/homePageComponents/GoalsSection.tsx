@@ -2,7 +2,6 @@ import Image from "next/image"
 import IClean from "../homeAssets/iclen.png";
 import IPromise from "../homeAssets/ipromise.png";
 import IInspire from "../homeAssets/iinspire.png";
-import {useTranslations} from 'next-intl';
 import { useMediaQuery } from '@react-hook/media-query';
 import { Container } from "@/global/components/Container";
 import React, { useEffect, useState } from "react";
@@ -10,7 +9,6 @@ import ReactPlayer from "react-player";
 import StatsBgImage from "../../[locale]/homeAssets/potaintal-home.jpeg";
 
 export const GoalsSection = () => {
-  const t = useTranslations('Index');
   const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
   const VIDEO_URL="https://www.youtube.com/watch?v=opWvTOVqay8"
   const CONTENT=[

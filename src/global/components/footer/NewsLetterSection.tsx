@@ -1,10 +1,8 @@
-import {useTranslations} from 'next-intl';
 import { useMediaQuery } from '@react-hook/media-query';
 import OutlinedButton from '../OutlinedButton';
 
 export default function NewsletterSection(){
     const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
-    const t = useTranslations('Index');
     const  NEWSLETTER_CONTENT={
       title:"ابق على اطلاع",
       subtitle:"اكتب بريدك الالتروني لتصلك اخبار الحملة",

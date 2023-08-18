@@ -2,14 +2,12 @@
 import Image from "next/image"
 import HeroImage from "../homeAssets/potentail-home2.jpeg";
 import MainButton from "@/global/components/MainButton";
-import {useTranslations} from 'next-intl';
 import { useMediaQuery } from '@react-hook/media-query';
 import { ROUTES } from "@/app/routes";
 import { Container } from "@/global/components/Container";
 import Link from 'next/link';
 
 export const HeroSection = () => {
-  const t = useTranslations('Index');
   const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
 
     const CONTENT = [
@@ -54,7 +52,6 @@ export const HeroSection = () => {
 
 
  const test = () => {
-  const t = useTranslations('Index');
   const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
   const HERO_CONTENT={
   title:"مستعد تشارك بالحملة الجاية؟",

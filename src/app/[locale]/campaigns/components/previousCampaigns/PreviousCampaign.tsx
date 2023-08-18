@@ -2,7 +2,6 @@ import Image, { StaticImageData } from "next/image"
 import CampaignImage from "../../assets/yello-cleaning.png";
 import Campaigns1 from "../../assets/cleaning-10.jpeg";
 import Campaigns2 from "../../assets/cleaning-15.jpeg";
-import {useTranslations} from 'next-intl';
 import { useMediaQuery } from '@react-hook/media-query';
 import { Container } from "@/global/components/Container";
 import { SectionTitle } from "@/global/components/SectionTitle";
@@ -13,7 +12,6 @@ import { TimeLine } from "./timeline/TimeLine";
 import { LoadingTimeLine } from "./timeline/LoadingTimeLine";
 
 export const PreviousCampaign = () => {
-  const t = useTranslations('Index');
   const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
     const { loading, error, data } = usePreviousCampaigns();
   if (error) {

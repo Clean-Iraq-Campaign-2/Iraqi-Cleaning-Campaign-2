@@ -1,14 +1,12 @@
 import Image from "next/image"
 import HeroImage from "../assets/campigns_hero.jpeg";
 import MainButton from "@/global/components/MainButton";
-import {useTranslations} from 'next-intl';
 import { useMediaQuery } from '@react-hook/media-query';
 import { Container } from "@/global/components/Container";
 import { cities } from "@/global/utils/cities";
 import { SuggustCampaignForm } from "./SuggustCampaignForm";
 
 export const CampaignsHero = () => {
-  const t = useTranslations('Index');
   const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
   const HERO_CONTENT={
   title:"وين تريد الحملة القادمة؟",

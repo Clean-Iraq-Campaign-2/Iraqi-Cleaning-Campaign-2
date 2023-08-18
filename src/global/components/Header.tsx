@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import {useTranslations} from 'next-intl';
 import MainButton from './MainButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -15,7 +14,6 @@ interface NavItem {
   link: string;
 }
 export default function Header() {
-  const t = useTranslations('Index');
   const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
   const [isNavOpen, setIsNavOpen] = useState(false);
   const toggleNav = () => {
@@ -38,7 +36,7 @@ export default function Header() {
            <Logo/>
         </div>
         <BoxNav HEADER_NAV={HEADER_NAV} isNavOpen={isNavOpen}/>
-        </div>
+        </div>  
       ):(
         <div className='flex justify-between items-center  w-[98%] md:w-[90%] mx-auto'>
           <Link href={ROUTES.join}>

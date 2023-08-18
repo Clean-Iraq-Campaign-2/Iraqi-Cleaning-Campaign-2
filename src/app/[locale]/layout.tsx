@@ -1,7 +1,6 @@
 'use client';
 import './globals.css';
 import type { Metadata } from 'next';
-import { NextIntlClientProvider } from 'next-intl';
 import Header from '@/global/components/Header';
 import Footer from '@/global/components/footer/Footer';
 import "slick-carousel/slick/slick.css";
@@ -19,30 +18,28 @@ export default function RootLayout({
   params: { locale: string };
 }) {
   // Load messages synchronously
-  let messages;
-  let errorOccurred = false;
+  // let messages;
+  // let errorOccurred = false;
 
-  try {
-    messages = require(`../../messages/${locale}.json`).default;
-  } catch (error) {
-    errorOccurred = true;
-  }
+  // try {
+  //   messages = require(`../../messages/${locale}.json`).default;
+  // } catch (error) {
+  //   errorOccurred = true;
+  // }
 
-  if (errorOccurred) {
-    // Handle error, e.g., redirect to a 404 page
-    return null;
-  }
+  // if (errorOccurred) {
+  //   // Handle error, e.g., redirect to a 404 page
+  //   return null;
+  // }
 
   return (
     <html lang="en">
       {/* Head content... */}
       <body className="bg-light font-ibm-plex-sans-arabic">
-      <NextIntlClientProvider locale={locale} messages={messages}>
         <Header/>
          <Toaster position='top-right' />
         {children}
         <Footer/>
-      </NextIntlClientProvider>
         </body>
     </html>
   );

@@ -4,13 +4,11 @@ import { faTelegram, faInstagram, faFacebook } from '@fortawesome/free-brands-sv
 import { Logo } from '../Logo';
 import { SocialLinks } from './SocialLinks';
 import { FooterColumn } from './FooterColumn';
-import {useTranslations} from 'next-intl';
 import NewsletterSection from './NewsLetterSection';
 import { ROUTES } from '@/app/routes';
 
 export default function Footer() {
     const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
-    const t = useTranslations('Index');
 
   const FOOTER_CONTENT={
     social:[
