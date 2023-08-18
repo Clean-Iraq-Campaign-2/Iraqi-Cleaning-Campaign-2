@@ -12,10 +12,8 @@ export function generateStaticParams() {
 
 export default function RootLayout({
   children,
-  params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: string };
 }) {
   // Load messages synchronously
   // let messages;
