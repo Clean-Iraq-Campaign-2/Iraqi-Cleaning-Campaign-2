@@ -6,8 +6,7 @@ import Header from '@/global/components/Header';
 import Footer from '@/global/components/footer/Footer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Toaster } from 'react-hot-toast';
-
+import toast, { Toaster } from 'react-hot-toast';
 export function generateStaticParams() {
   return [{locale: 'en'}, {locale: 'ar'}];
 }
@@ -38,13 +37,13 @@ export default function RootLayout({
     <html lang="en">
       {/* Head content... */}
       <body className="bg-light font-ibm-plex-sans-arabic">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
-          <Toaster position='top-right'/>
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        <Header/>
+         <Toaster position='top-right' />
+        {children}
+        <Footer/>
+      </NextIntlClientProvider>
+        </body>
     </html>
   );
 }
