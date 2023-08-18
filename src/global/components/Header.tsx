@@ -8,7 +8,6 @@ import {ROUTES} from "../../app/routes";
 import { useMediaQuery } from '@react-hook/media-query';
 import { useState } from 'react';
 import { Logo } from './Logo';
-import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 
 interface NavItem {
@@ -18,7 +17,6 @@ interface NavItem {
 export default function Header() {
   const t = useTranslations('Index');
   const isTabletOrMobile = useMediaQuery('(max-width: 768px)');
-  const router = useRouter();
   const [isNavOpen, setIsNavOpen] = useState(false);
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -43,14 +41,18 @@ export default function Header() {
         </div>
       ):(
         <div className='flex justify-between items-center  w-[98%] md:w-[90%] mx-auto'>
-          <MainButton text="انضم ويانه" onClick={()=>{router.push(ROUTES.join)}}/>
+          <Link href={ROUTES.join}>
+          <MainButton text="انضم ويانه" />
+
+          </Link>
           <div className='flex items-center gap-6'>
             <InLineNav HEADER_NAV={HEADER_NAV}/>
            <Logo/>
           </div>
         </div>
       )}
-      </header>
+      </header> 
+    
    
   )
 }
